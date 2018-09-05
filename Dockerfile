@@ -4,7 +4,9 @@ WORKDIR /usr/src/app
 
 COPY *.json ./
 
-RUN npm install tsd bower gulp -g \
+RUN apk update \
+    && apk add git \
+    && npm install tsd bower gulp -g \
     && bower install --allow-root \
     && tsd reinstall \
     && npm install gulp
