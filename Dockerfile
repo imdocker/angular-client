@@ -1,6 +1,4 @@
-FROM node:8.11.3-jessie
-
-RUN apt-get update && apt-get upgrade npm -y
+FROM node:8.11.4-alpine
 
 WORKDIR /usr/src/app
 
