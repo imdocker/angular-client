@@ -4,10 +4,13 @@ WORKDIR /usr/src/app
 
 COPY *.json .bowerrc ./
 
-RUN    apk --no-cache add --virtual native-deps \
+RUN    date \
+    && apk --no-cache add  \
        g++ gcc libgcc libstdc++ linux-headers make python git \
     && npm install tsd bower gulp -g \
     && bower install --allow-root \
     && tsd reinstall \
     && npm install gulp \
-    && apk del native-deps
+    && date
+#   && apk del native-deps
+
