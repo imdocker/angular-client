@@ -2,7 +2,7 @@ FROM node:8.11.4-alpine
 
 WORKDIR /usr/src/app
 
-COPY *.json ./
+COPY *.json .bowerrc ./
 
 RUN    apk --no-cache add --virtual native-deps \
        g++ gcc libgcc libstdc++ linux-headers make python git \
