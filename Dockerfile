@@ -11,6 +11,7 @@ RUN    date \
     && bower install --allow-root \
     && tsd reinstall \
     && npm install gulp \
+    && apk upgrade apk --no-cache \
     && date
 #   && apk del native-deps
 
